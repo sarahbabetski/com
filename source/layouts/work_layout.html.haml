@@ -1,0 +1,13 @@
+- cp = current_page.path
+
+- wrap_layout :layout do
+  .row-fluid
+    .span12.sub-nav
+      %ul
+        %li.secondary{ class: ('active' if cp[/index/]) } 
+          %a{ :href => "/work/" } Web
+        %li.secondary{ class: ('active' if cp[/print/]) }
+          %a{ :href => "/work/print" } Print
+        %li.secondary{ class: ('active' if cp[/miscellaneous/]) } 
+          %a{ :href => "/work/miscellaneous" } Miscellaneous
+  = yield

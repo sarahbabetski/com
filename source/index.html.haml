@@ -1,1 +1,35 @@
-home page
+.hero
+  .row-fluid
+    .span10.offset1
+      %h2.herobanner I’m a designer of things, mostly.
+  .row-fluid
+    .span4.offset1
+      %h3.subtitle Specifically, I design websites, user-interfaces &amp; print collateral.
+    .span6.padding
+      %img.hero-index{ src: '/img/hero-lc.png' }
+.row-fluid
+  .span12.highlight
+    %h4.highlight-headline 
+      %a.callout{ :href => "/work/" }
+        VIEW 
+        %br
+        %span &mdash;THE&mdash;
+        %br/
+        WORK
+.features
+  .row-fluid
+    .span4
+      %a{:href => "/work/#web-features"}
+        %h5.feature-headline Featured Website
+        .featured-web
+          %img.border-dev{ src: '/img/sb_feature_cp.jpg' }
+    .span4
+      %a{:href => "/work/print"}
+        %h5.feature-headline Featured Print Project
+        .featured-print
+          %img.border-dev{ src: '/img/sb_feature_bjs.jpg' }
+    .span4
+      %a{:href => "/work/#dev-features"}
+        %h5.feature-headline In Development 
+        .development 
+          %img.border-dev{ src: '/img/sb_feature_kb.jpg' }

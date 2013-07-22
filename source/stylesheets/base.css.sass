@@ -1,0 +1,656 @@
+/*color definitions
+$deepblue: #17535D
+$lime: #D2E400
+
+/*font definitions
+@font-face
+  font-family: Alexandria_bold
+  src: url("/fonts/AlexandriaFLF-Bold.ttf")
+
+@font-face
+  font-family: Alexandria_bitalic
+  src: url("/fonts/AlexandriaFLF-BoldItalic.ttf")
+
+@font-face
+  font-family: Alexandria_reg
+  src: url("/fonts/AlexandriaFLF.ttf")
+
+@font-face
+  font-family: Alexandria_italic
+  src: url("/fonts/AlexandriaFLF-Italic.ttf")
+
+@media only screen and (min-width:320px)
+  body
+    padding-right: 0 !important
+    padding-left: 0 !important
+    margin-left: auto
+    margin-right: auto
+
+@media only screen and (min-width: 768px)
+  .navbar-inner
+    .nav
+      float: right  
+
+@media only screen and (max-width: 320px) 
+  li.secondary
+    display: block !important
+    padding-left: 20px !important
+
+  .sub-nav
+    padding-left: 0 !important
+      
+@media only screen and (max-width: 480px)   
+  .mobile-hide
+    display: none
+    
+  .tag-work
+    font-size: 1.7em !important
+
+/* #Mobile (Portrait)
+/* Note: Design for a width of 320px
+@media only screen and (min-width: 320px) and (max-width: 479px)
+  .hero-index
+    padding-bottom: 50px
+    
+  .featured-web, .featured-print, .development
+    margin-bottom: 20px    
+    
+  .hero-about 
+    background-image: url(/img/about-hero-lg.jpg)
+    background-size: 175% !important
+    background-repeat: no-repeat
+    background-position: top
+    background-color: #333333
+  
+  .article-about 
+    padding: 350px 15px 10px 15px !important
+      
+  .contact-button 
+    padding: 15px 15px 50px 15px !important
+  
+  .tag-about, .tag-work
+    font-family: Alexandria_reg, georgia, serif
+    font-size: .8em
+    color: $lime
+    line-height: .8em
+    padding: 0
+    margin: 0
+
+  form
+    margin: 0px !important
+    
+  .contact-headline
+    padding: 30px 5% 20px 5% !important
+    
+
+/* 480 landscape 
+@media only screen and (min-width:480px) and (max-width: 520px) 
+  .hero-index
+    padding-bottom: 50px
+ 
+  .featured-web
+    background-image: url(/img/sb_feature_cp_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+
+  .featured-print
+    background-image: url(/img/sb_feature_bjs_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+
+  .development
+    background-image: url(/img/sb_feature_kb_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+
+  .featured-web img, .featured-print img, .development img
+    visibility: hidden
+    height: 300px !important
+
+  .hero-about 
+    background-image: url(/img/about-hero-lg.jpg)
+    background-size: 100% !important
+    background-repeat: no-repeat
+    background-position: top
+    background-color: #333333
+  
+  .article-about
+    padding: 300px 15px 10px 15px !important
+    
+  .contact-button 
+    padding: 15px 15px 35px 15px !important
+    
+  .contact-headline
+    padding: 30px 5% 20px 5% !important
+    
+  form
+    margin: 0px !important
+
+@media only screen and (min-width:520px) and (max-width: 600px) 
+  .hero-index
+    padding-bottom: 50px
+  
+  .featured-web
+    background-image: url(/img/sb_feature_cp_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+
+  .featured-print
+    background-image: url(/img/sb_feature_bjs_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+
+  .development
+    background-image: url(/img/sb_feature_kb_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+  
+  .featured-web img, .featured-print img, .development img
+    visibility: hidden
+    height: 300px !important
+  
+  .hero-about
+    background-color: #333333
+    
+  .article-about
+    padding: 350px 15px 10px 15px !important
+
+  .contact-headline
+    padding: 30px 5% 20px 5% !important
+    
+@media only screen and (min-width:600px) and (max-width: 685px) 
+  .hero-index
+    padding-bottom: 50px
+    
+  .featured-web
+    background-image: url(/img/sb_feature_cp_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+
+  .featured-print
+    background-image: url(/img/sb_feature_bjs_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+
+  .development
+    background-image: url(/img/sb_feature_kb_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+
+  .featured-web img, .featured-print img, .development img
+    visibility: hidden
+    height: 300px !important
+  
+  .hero-about
+    background-color: #333333
+
+  .article-about
+    padding: 400px 15px 10px 15px !important
+
+  .contact-headline
+    padding: 30px 5% 20px 5% !important
+
+@media only screen and (min-width:685px) and (max-width: 768px)   
+  .hero-index
+    padding-bottom: 50px
+  
+  .featured-web
+    background-image: url(/img/sb_feature_cp_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+    
+  .featured-print
+    background-image: url(/img/sb_feature_bjs_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+    
+  .development
+    background-image: url(/img/sb_feature_kb_lg.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-bottom: 20px
+
+  .featured-web img, .featured-print img, .development img
+    visibility: hidden
+    height: 300px !important
+    
+  .hero-about
+    background-color: #333333
+
+  .article-about
+    padding: 450px 15px 10px 15px !important
+  
+  .contact-headline
+    padding: 30px 5% 20px 5% !important
+  
+@media only screen and (min-width:768px) and (max-width: 800px)  
+  .hero-index
+    padding-bottom: 50px
+    
+  .hero-about
+    background-image: url(/img/about-hero-lg.jpg)
+    background-size: 160% !important
+    background-repeat: no-repeat
+    background-position: top
+    background-color: #333333
+
+  .article-about
+    padding: 150px 15px 10px 15px !important 
+  
+  .contact-button 
+    padding: 15px 15px 25px 15px !important
+    
+  .contact-headline
+    padding: 30px 5% 20px 5% !important
+    
+@media only screen and (min-width:801px) and (max-width: 900px)
+
+  .hero-about 
+    background-image: url(/img/about-hero-lg.jpg)
+    background-size: 140% !important
+    background-repeat: no-repeat
+    background-position: top
+    background-color: #333333
+    
+  .article-about
+    padding: 150px 15px 10px 15px !important
+
+  .contact-button 
+    padding: 15px 15px 25px 15px !important
+    
+  .contact-headline
+    padding: 30px 5% 20px 5% !important
+    
+@media only screen and (min-width:900px)
+
+  .hero-about 
+    background-image: url(/img/about-hero-lg.jpg)
+    background-size: cover !important
+    background-repeat: no-repeat
+    background-position: top
+    background-color: #333333
+
+  .article-about
+    padding: 350px 15px 10px 15px !important
+
+  .contact-button 
+    padding: 15px 15px 75px 15px !important
+
+  .contact-headline
+    padding: 30px 15% 20px 15% !important
+        
+/*page styles
+
+body
+  background-color: #98A6AA 
+
+  
+// over ride bootstrap navbar css
+.navbar-inner
+  background-image: none 
+  background-color: $deepblue
+  border-radius: 0px
+  border: none
+  
+  .nav
+    
+    li
+      a
+        color: #ffffff
+        text-shadow: none
+      
+      a:hover
+        color: $lime
+  
+    li.active 
+      a 
+        background-color: $lime !important
+        box-shadow: none
+        -webkit-box-shadow: none
+        -moz-box-shadow: none
+        color: $deepblue
+        text-shadow: none
+      
+  
+  .brand
+    font-family: Alexandria_reg, georgia, serif
+    letter-spacing: 1px
+    text-shadow: none
+    color: #D2E400
+    font-size: 1.2em
+
+.navbar
+  margin-bottom: 0px
+  
+  .icon-bar
+    background-color: $lime !important
+    color: $lime
+    
+  .btn.btn-navbar
+    background-image: none
+    background-color: $deepblue
+    border-radius: 0px  
+    box-shadow: none
+    border: none
+    
+.footer
+  background-color: #98A6AA
+  color: #ffffff
+  padding-bottom: 40px
+  
+  ul
+    list-style-type: none
+    margin: 0px
+    padding-left: 20px
+  
+    li a
+      list-style-type: none
+      color: #ffffff
+
+h6.foot
+  font-family: Alexandria_bold, georgia, serif
+  font-size: 16px
+  color: #374648
+  padding-left: 20px
+
+ul.social-media-links
+  li
+    display: inline-block
+    margin-right: 20px
+
+    a
+      height: 35px
+      width: 35px
+      background-size: 35px
+      background-repeat: no-repeat
+      display: inline-block  
+
+      &.linkedin
+        background-image: url("/img/icon-linkedin.png")
+
+      &.twitter
+        background-image: url("/img/icon-twitter.png")
+
+      &.pinterest
+        background-image: url("/img/icon-pinterest.png")
+  
+ul.contact-now
+  li
+    display: inline-block
+    margin-right: 20px
+    
+    a
+      height: 35px
+      min-width: 35px
+      background-size: 35px
+      background-repeat: no-repeat
+      display: inline-block  
+
+      &.email
+        background-image: url("/img/icon-email.png")
+  
+      &.phone
+        background-image: url("/img/icon-phone.png")
+
+.copyright
+  color: #ffffff
+  font-size: 1em
+  
+  .legal
+    padding-left: 20px
+
+// index styles
+
+.hero, .hero-contact
+  /* fallback
+  background-color: #ffffff
+  /* Safari 4-5, Chrome 1-9
+  /* Can't specify a percentage size? Laaaaaame.
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#ffffff), to(#e0e0e0))
+  /* Safari 5.1+, Chrome 10+
+  background: -webkit-radial-gradient(circle, #ffffff, #e0e0e0)
+  /* Firefox 3.6+
+  background: -moz-radial-gradient(circle, #ffffff, #e0e0e0)
+  /* IE 10
+  background: -ms-radial-gradient(circle, #ffffff, #e0e0e0)
+  /* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing)
+
+.hero
+  padding-bottom: 60px
+
+.herobanner 
+  font-family: Alexandria_reg, georgia, serif
+  font-weight: 100
+  font-size: 4em
+  line-height: 1.15
+  color: #4B9FAC
+  padding: 40px 20px 0 20px 
+  margin: 0
+
+  
+.subtitle
+  font-family: Alexandria_reg, georgia, serif
+  font-weight: 100
+  font-size: 2em
+  line-height: 1.2
+  color: #4B9FAC
+  padding: 40px 20px 0 20px
+  
+.highlight
+  position: relative
+  margin-top: -45px
+  background-image: url(/img/icon-highlight.png)
+  background-repeat: no-repeat
+  background-position: center center
+  width: 90px
+  height: 90px
+  background-size: 90px  
+  display: block
+
+h4
+  padding: 0
+  margin: 0 
+  height: 90px
+  text-align: center
+    
+a.callout
+  color: $deepblue
+  font-family: Alexandria_bold, georgia, serif !important
+  text-align: center
+  position: relative 
+  top: 12px
+  font-size: 1em
+  
+  a.callout span
+    font-size: .9em
+  
+.features
+  background-color: #ffffff
+  margin-top: -45px
+  padding: 80px 10% 80px 10%
+  
+.hero-about
+  background-image: url(/img/about-hero-lg.jpg)
+  background-size: 100%
+  background-repeat: no-repeat
+  background-position: inherit 
+
+  .about
+    padding: 400px 15px 10px 15px
+
+  .tag-about
+    font-family: Alexandria_reg, georgia, serif
+    font-size: 2em
+    color: $lime
+    line-height: .9em
+    padding: 0
+    margin: 0
+  
+  .copy-about
+    font-family: Arial, Helvetica, sans-serif
+    font-weight: lighter
+    font-size: .67em
+    color: #ffffff
+    line-height: .7em
+    padding: 0
+    margin: 0
+  
+  .contact-button 
+    padding: 15px 15px 100px 15px
+    
+    a.contact-btn,
+      background-color: $lime
+      color: $deepblue
+      font-family: Arial, Helvetica, sans-serif !important
+      text-transform: uppercase
+      text-align: center
+      padding: 10px
+      font-size: 16px
+
+.feature-headline
+  font-family: Arial, Helvetica, sans-serif
+  font-weight: lighter
+  color: #98A6AA
+  font-size: 1.5em
+
+.contact-headline
+  padding: 30px 20% 20px 20%  
+  
+.module-contact
+  background-color: #4B9FAF
+  width: 100%
+
+  .contact-info
+    color: #ffffff
+    font-family: Alexandria_reg, georgia, serif
+    text-transform: uppercase
+    font-size: 1.4em
+    text-rendering: optimizeLegibility
+  
+  .form-text
+    width: 93%
+    border: 0px
+    
+  .message
+    margin-top: 40px
+    
+  .form-text-area
+    width: 96%
+    height: 100px
+    border: 0px
+  
+  .input-btn
+    background-color: $lime
+    color: $deepblue
+    font-family: Arial, Helvetica, sans-serif !important
+    text-transform: uppercase
+    text-align: center
+    padding: 10px
+    font-size: 16px
+    border: 0px
+    margin-top: 10px
+    width: 100%
+  
+.form-styles
+  border-radius: 0px !important
+  margin-top: 10px
+  
+.contact-form
+  padding: 5% 
+  
+.thank-you
+  padding-top: 200px
+  min-height: 400px
+  
+.sub-nav
+  background-color: #65A3AF
+  padding-left: 15px
+
+  ul
+    padding: 0
+    margin: 0
+
+  li.secondary 
+    display: inline-block
+    list-style-type: none
+    padding: 7px 10px 
+    
+    &.active a
+      color: $deepblue
+    
+    a
+      color: #ffffff
+      
+      &:hover
+        color: $deepblue
+      
+    &:hover
+      background-color: $lime
+    
+.work-section
+  background-color: #ffffff
+  padding: 0 0 0 20px
+
+.tag-work
+  font-family: Alexandria_reg, georgia, serif
+  color: #65A3AF
+  line-height: 2em
+  padding: 0
+  margin: 0
+
+.project-title
+  color: #98A6AA
+  font-size: 1.5em
+  font-weight: lighter
+  margin: 0
+  padding: 0
+  line-height: 1
+  
+.skill
+  font-size: 1em
+  color: #65A3AF
+  line-height: 5px  
+  
+.project-link
+  color: #65A3AF
+  font-size: .9em
+  line-height: 40px
+  display: block
+
+.project-sub
+  font-weight: bold
+  color: #06333D
+  font-size: 1em
+  text-transform: uppercase
+  text-align: left
+  letter-spacing: 1px
+  
+.description
+  color: #2C3738
+  padding: 0 0 15px 0
+  margin: 0
+  
+.project-img
+  margin-bottom: 100px
+  padding-right: 20px
+  
+.border
+  box-shadow: 0px 0px 8px #dddddd
+
+.border-dev
+  box-shadow: 0px 0px 8px #888
+  
+.work-dev 
+  background-color: #B8DAE0
+  padding: 0 0 0 20px

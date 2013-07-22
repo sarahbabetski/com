@@ -1,0 +1,16 @@
+- anchor = project["anchor"]
+- if anchor && anchor.length > 0
+  %a{:name => anchor }
+  
+%div{ class: project["class_name"] }
+  .row-fluid
+    .span3 
+      %h3.project-title= project["title"]
+      %span.skill= project["skills_applied"]
+      
+      - link_url = project["link_url"]
+      - if link_url && link_url.length > 0
+        %a.project-link{ :href => link_url }= project["link_title"]
+        
+    .span8.offset1.project-img
+      %img{ src: project["image_path"] }

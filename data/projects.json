@@ -1,0 +1,100 @@
+{
+  "in_dev_web": [
+    { 
+      "title": "Little Chef",
+      "class_name": "work-dev",
+      "image_path": "/img/sb_lc_lg.png",
+      "link_url": "http://www.littlechefapp.com",
+      "link_title": "littlechefapp.com",
+      "challenge": "",
+      "solution": "",
+      "skills_applied": "UI, UX, Visual Design, Front-end Development"
+    },
+    { 
+      "title": "Kate Babetski Photography",
+      "class_name": "work-dev",
+      "anchor": "dev-features",
+      "image_path": "/img/sb_kb_lg.png",
+      "link_url": "http://www.katebabetski.com",
+      "link_title": "katebabetski.com",
+      "challenge": "",
+      "solution": "",
+      "skills_applied": "UI, UX, Visual Design, Front-end Development"
+    }
+  ],
+  "featured_web": [
+    { 
+      "title": "Choice Privileges Cruises",
+      "class_name": "work-section",
+      "anchor": "web-features",
+      "image_path": "/img/sb_choice_lg.jpg",
+      "link_url": "http://choice.cruisesonly.com",
+      "link_title": "choice.cruisesonly.com",
+      "challenge": "",
+      "solution": "",
+      "skills_applied": "Homepage Visual Redesign"
+    },
+    { 
+      "title": "Signature Escapes Cruises",
+      "class_name": "work-section",
+      "image_path": "/img/sb_svo_lg.jpg",
+      "link_url": "http://svn.cruisesonly.com",
+      "link_title": "svn.cruisesonly.com",
+      "challenge": "",
+      "solution": "",
+      "skills_applied": "Homepage Visual Redesign"
+    }
+  ],
+  "featured_print": [
+    { 
+      "title": "BJ&rsquo;s Biannual Travel Catalogs",
+      "class_name": "work-section",
+      "image_path": "/img/sb_bjcatalog_lg.jpg",
+      "challenge": "",
+      "solution": "",
+      "skills_applied": "Pagination, Layout, Graphic Design"
+    },
+    { 
+      "title": "Villas of Distinction OceanHome Ad",
+      "class_name": "work-section",
+      "image_path": "/img/sb_ohad_lg.jpg",
+      "challenge": "",
+      "solution": "",
+      "skills_applied": "Layout, Graphic Design"
+    },
+    { 
+      "title": "United Cruises Hemispheres Ad",
+      "class_name": "work-section",
+      "image_path": "/img/sb_ual_lg.jpg",
+      "challenge": "",
+      "solution": "",
+      "skills_applied": "Layout, Graphic Design"
+    },
+    { 
+      "title": "Taste of Exploritas Invitation",
+      "class_name": "work-section",
+      "image_path": "/img/sb_te_lg.jpg",
+      "challenge": "",
+      "solution": "",
+      "skills_applied": "Layout, Graphic Design, Illustration"
+    }
+  ],
+  "featured_miscellaneous": [
+    { 
+      "title": "WTH, Inc. Internal Infographic",
+      "class_name": "work-section",
+      "image_path": "/img/sb_intinf_lg.jpg",
+      "challenge": "",
+      "solution": "",
+      "skills_applied": "Graphic Design, Illustration"
+    },
+    { 
+      "title": "Little Chef Identity",
+      "class_name": "work-section",
+      "image_path": "/img/sb_lcid_lg.jpg",
+      "challenge": "",
+      "solution": "",
+      "skills_applied": "Graphic Design, Illustration"
+    }
+  ]
+}

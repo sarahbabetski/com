@@ -1,0 +1,6 @@
+.row-fluid
+  .span12
+    .work-section
+      %h2.tag-work Featured Print Projects
+- data.projects.featured_print.each do |p|
+  = partial :project, locals: { project: p }

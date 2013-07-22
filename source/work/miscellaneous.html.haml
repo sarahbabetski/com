@@ -1,0 +1,6 @@
+.row-fluid
+  .span12
+    .work-section
+      %h2.tag-work Featured Miscellaneous Projects
+- data.projects.featured_miscellaneous.each do |p|
+  = partial :project, locals: { project: p }

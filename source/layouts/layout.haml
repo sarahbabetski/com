@@ -6,17 +6,19 @@
   %head
     %meta{:charset => "utf-8"}
     
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    
     / Always force latest IE rendering engine or request Chrome Frame
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     
     / Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "Sarah Babetski"
     
-    = stylesheet_link_tag 'normalize', 'bootstrap.min', 'bootstrap-responsive.min', 'all'
-    = javascript_include_tag  'jquery-1.10.2.min', 'bootstrap.min', 'all'
+    = stylesheet_link_tag 'all'
+    = javascript_include_tag  'all'
     
   %body{ class: page_classes }
-
+        
     .navbar
       .navbar-inner
         .container
@@ -24,19 +26,47 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "/  "} Sarah Babetski
+          %a.brand{:href => "/  "} Sarah Babetski Design
           .nav-collapse.collapse
             %ul.nav
-              %li{ class: ('active' if cp[/index/]) }
+              %li{ class: ('active' if cp[/^index/]) }
                 %a{:href => "/"} Home
               - %w(work about contact).each do |link_title|
-                %li
-                  %a{:href => "/#{link_title}"}= link_title.capitalize        
+                %li{ class: ('active' if cp[/#{link_title}/]) }
+                  %a{:href => "/#{link_title}"}= link_title.capitalize
 
+    .content
       = yield
-      
-      .footer
-        %p
-          2013 All Rights Reserved.
+    
+    .row-fluid.footer
+      .span4
+        %h6.foot
+          Connect Elsewhere
+        %ul.social-media-links
+          %li
+            %a.linkedin{:href => "http://www.linkedin.com/in/sarahbabetski"}
+          %li
+            %a.twitter{:href => "https://twitter.com/SarahBabetski"}
+          %li
+            %a.pinterest{:href => "http://pinterest.com/babetskidesign"}
+      .span4
+        %h6.foot
+          Get in Touch Now
+        %ul.contact-now
+          %li
+            %a.email{:href => "mailTo:design@sbabetski.com"} 
+          %li
+            %a.phone{:href => "tel:978.660.1233" }
+      .span4
+        %h6.foot Around Here
+        %ul
+          - %w(work about contact).each do |link_title|
+            %li
+              %a{:href => "/#{link_title}"}= link_title.capitalize
+        
+    .row-fluid.copyright
+      .span12
+        %p.legal
+          &copy; 2013 All Rights Reserved.
           %br
           This site is designed and maintained by Sarah Babetski.

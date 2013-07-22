@@ -1,1 +1,26 @@
-contact
+.hero-contact
+  .row-fluid.mobile-hide
+    .span12
+      %h2.herobanner.contact-headline I would love to hear from you. 
+  .row-fluid
+    .span8.offset2
+      .module-contact
+        %form.contact-form{:action => "/webformmailer.php", :method => "post"}
+          %input{ type: 'hidden', name: 'redirect', value: 'thank_you'}
+          .row-fluid.contact-info
+            .span6
+              Your Name 
+              %br
+              %input.form-styles.form-text{:name => "name", :type => "text"}
+            .span6
+              Your Email Address 
+              %br
+              %input.form-styles.form-text{:name => "email", :type => "text"}
+          .row-fluid.contact-info.message
+            .span12  
+              Your Message 
+              %br
+              %textarea.form-styles.form-text-area{:name => "Message", :maxlength=> "350"}
+          .row-fluid.input-module
+            .span4.offset4
+              %input.input-btn{:name => "Submit", :type=> "submit"}

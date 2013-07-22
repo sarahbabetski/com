@@ -1,0 +1,13 @@
+.row-fluid
+  .span12
+    .work-dev
+      %h2.tag-work Sneak Peek (In Development)
+- data.projects.in_dev_web.each do |p|
+  = partial :project, locals: { project: p }
+
+.row-fluid
+  .span12
+    .work-section
+      %h2.tag-work Featured Web Projects
+- data.projects.featured_web.each do |p|
+  = partial :project, locals: { project: p }     
