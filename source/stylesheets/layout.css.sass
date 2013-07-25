@@ -1,0 +1,162 @@
+@import "variables"
+
+/*font definitions
+@font-face
+  font-family: Alexandria_bold
+  src: url("/fonts/AlexandriaFLF-Bold.ttf")
+
+@font-face
+  font-family: Alexandria_bitalic
+  src: url("/fonts/AlexandriaFLF-BoldItalic.ttf")
+
+@font-face
+  font-family: Alexandria_reg
+  src: url("/fonts/AlexandriaFLF.ttf")
+
+@font-face
+  font-family: Alexandria_italic
+  src: url("/fonts/AlexandriaFLF-Italic.ttf")
+
+@media only screen and (min-width:1px)
+  body
+    padding-right: 0 !important
+    padding-left: 0 !important
+    margin-left: auto
+    margin-right: auto
+
+@media only screen and (min-width: 768px)
+  .navbar-inner
+    .nav
+      float: right
+
+@media only screen and (max-width: 320px) 
+  li.secondary
+    display: block !important
+    padding-left: 20px !important
+
+  .sub-nav
+    padding-left: 0 !important
+    
+@media only screen and (max-width: 480px)  
+  .visible-480-or-lower
+    visibility: visible
+  
+@media only screen and (min-width: 481px)  
+  .visible-480-or-lower
+    visibility: hidden
+    display: none
+
+body
+  background-color: #98A6AA 
+
+
+// over ride bootstrap navbar css
+.navbar
+  background-color: $deepblue !important
+
+.navbar-inner
+  background-image: none !important
+  background-color: $deepblue !important
+  border-radius: 0px
+  -moz-border-radius: 0px !important
+  -webkit-border-radius: 0px !important
+  -o-border-radius: 0px !important
+  border: none
+  background-repeat: no-repeat
+  filter: none
+
+  .nav
+
+    li
+      a
+        color: #ffffff
+        text-shadow: none
+
+      a:hover
+        color: $lime
+
+    li.active 
+      a 
+        background-color: $lime !important
+        box-shadow: none
+        -moz-box-shadow: none
+        -webkit-box-shadow: none
+        -o-box-shadow: none
+        color: $deepblue
+        text-shadow: none
+
+
+  .brand
+    font-family: Alexandria_reg, georgia, serif
+    letter-spacing: 1px
+    text-shadow: none
+    color: #D2E400
+    font-size: 1.2em
+
+.navbar
+  margin-bottom: 0px
+
+  .icon-bar
+    background-color: $lime !important
+    color: $lime
+
+  .btn.btn-navbar
+    background-image: none
+    background-color: $deepblue !important
+    border-radius: 0px
+    -moz-border-radius: 0px
+    -webkit-border-radius: 0px
+    -o-border-radius: 0px
+    box-shadow: none
+    -moz-box-shadow: none
+    -webkit-box-shadow: none
+    -o-box-shadow: none
+    border: none
+
+.footer
+  background-color: #98A6AA
+  color: #ffffff
+  padding-bottom: 40px
+
+  ul
+    list-style-type: none
+    margin: 0px
+    padding-left: 20px
+
+    li a
+      list-style-type: none
+      color: #ffffff
+
+h6.foot
+  font-family: Alexandria_bold, georgia, serif
+  font-size: 16px
+  color: #374648
+  padding-left: 20px
+
+ul.social-media-links
+  li
+    display: inline-block
+    margin-right: 20px
+
+    a
+      height: 35px
+      width: 35px
+      display: inline-block  
+
+
+ul.contact-now
+  li
+    display: inline-block
+    margin-right: 20px
+
+    a
+      height: 35px
+      width: 35px
+      display: inline-block  
+
+.copyright
+  color: #ffffff
+  font-size: 1em
+
+  .legal
+    padding-left: 20px

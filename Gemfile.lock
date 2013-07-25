@@ -101,6 +101,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass
   middleman!
   middleman-livereload (~> 3.1.0)
   ruby18_source_location

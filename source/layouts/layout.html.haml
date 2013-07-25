@@ -16,6 +16,8 @@
     
     = stylesheet_link_tag 'all'
     = javascript_include_tag  'all'
+    /[if lt IE 9]
+      = stylesheet_link_tag 'ie8_and_lower'
     
   %body{ class: page_classes }
         
@@ -45,18 +47,23 @@
         %ul.social-media-links
           %li
             %a.linkedin{:href => "http://www.linkedin.com/in/sarahbabetski"}
+              %img{ src: '/img/icon-linkedin.png', alt: 'LinkedIn Icon' }
           %li
             %a.twitter{:href => "https://twitter.com/SarahBabetski"}
+              %img{ src: '/img/icon-twitter.png', alt: 'Twitter Icon' }
           %li
             %a.pinterest{:href => "http://pinterest.com/babetskidesign"}
+              %img{ src: '/img/icon-pinterest.png', alt: 'Pinterest Icon' }
       .span4
         %h6.foot
           Get in Touch Now
         %ul.contact-now
           %li
             %a.email{:href => "mailTo:design@sbabetski.com"} 
+              %img{ src: '/img/icon-email.png', alt: 'E-Mail Icon' }
           %li
             %a.phone{:href => "tel:978.660.1233" }
+              %img{ src: '/img/icon-phone.png', alt: 'Phone Icon' }
       .span4
         %h6.foot Around Here
         %ul
